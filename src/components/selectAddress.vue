@@ -30,6 +30,7 @@
       </section>
     <!-- 收货地址三级联动选项 end-->
     <div class="layout" :class="{layoutBg:islayout}" @click="closeAdd()"></div>
+    <b-map-component></b-map-component>
   </div>
 </template>
 <script>
