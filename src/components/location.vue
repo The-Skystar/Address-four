@@ -47,7 +47,7 @@
         this.getlocation();//获取当前坐标, 测试时获取定位不准。
 
         var point = new BMap.Point(this.userlocation.lng, this.userlocation.lat);  // 创建点坐标
-        this.map.centerAndZoom(point, 30);                 // 初始化地图，设置中心点坐标和地图级别
+        this.map.centerAndZoom(point, 20);                 // 初始化地图，设置中心点坐标和地图级别
         var marker = new BMap.Marker(point);        // 创建标注
         this.map.addOverlay(marker);                     // 将标注添加到地图中
 
@@ -145,7 +145,7 @@
         localSearch.setSearchCompleteCallback(function(searchResult) {
           var poi = searchResult.getPoi(0);
           th.userlocation = poi.point;
-          th.map.centerAndZoom(poi.point, 13);
+          th.map.centerAndZoom(poi.point, 20);
           th.getMarker(th.userlocation);
         });
         localSearch.search(keyword);
